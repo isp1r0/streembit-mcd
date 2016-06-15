@@ -25,7 +25,7 @@ var dgram = require('dgram');
 
 var streembit = streembit || {};
 
-var ip_addresss = "229.255.255.255";
+var ip_addresss = "230.255.255.1";
 var port = 32399 ;
 
 var client = dgram.createSocket('udp4');

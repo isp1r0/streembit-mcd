@@ -26,7 +26,7 @@ var publisher = dgram.createSocket("udp4");
 
 var streembit = streembit || {};
 
-var ip_addresss = "229.255.255.255";
+var ip_addresss = "230.255.255.1";
 var port = 32399 ;
 
 var payload = {
@@ -45,6 +45,7 @@ function broadcastNew() {
 publisher.bind( function() {
 	publisher.setBroadcast(true)
 	publisher.setMulticastTTL(128);
+	publisher.addMembership(ip_addresss); 
 	setInterval(broadcastNew, 5000);
 });
   
